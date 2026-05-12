@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Love Story</title>
+  <meta name="description"
+    content="Sebuah permintaan maaf tulus dari hati yang paling dalam. Website romantis penuh cinta dan harapan." />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-heart">💕</div>
+    <div class="loading-text">Memuat kenangan kita...</div>
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- Stars Background -->
+  <div class="stars-container" id="starsContainer"></div>
+
+  <!-- Floating Hearts -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Love Explosion Overlay -->
+  <div class="love-explosion" id="loveExplosion"></div>
+
+  <!-- Music Control -->
+  <button class="music-control" id="musicBtn" aria-label="Toggle Music">
+    <div class="music-bars" id="musicBars">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </button>
+
+  <!-- ====== OPENING SCREEN ====== -->
+  <section id="opening">
+    <div class="rain-container" id="rainContainer"></div>
+    <div class="opening-content">
+      <div class="opening-subtitle" id="openingSubtitle">Dari hatiku yang paling dalam...</div>
+      <h1 class="opening-title">
+        <span class="typing-text" id="typingText"></span>
+      </h1>
+      <p class="opening-message" id="openingMessage">
+        Aku tahu kata maaf tidak cukup untuk semua yang telah terjadi sayang
+      </p>
+      <button class="btn-maaf" id="btnMaaf" onclick="handleForgive()">
+        Maafin Aku ❤️
+      </button>
+    </div>
+  </section>
+
+  <!-- ====== LOVE STORY TIMELINE ====== -->
+  <section id="love-story">
+    <div class="section-header">
+      <span class="section-label">Perjalanan Kita</span>
+      <h2 class="section-title">Our Love Story</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <img src="assets/photo1.png" alt="Pertama Kali Bertemu" loading="lazy" />
+          <div class="timeline-date">Hari Pertama</div>
+          <h3>Pertama Kali Bertemu</h3>
+          <p>Aku liat kamu sayang pas pertama kali di abdimas, Dihati udah naksir kamu duluan tapi di otak bisa ga yaaa
+            dapetin kamu, Seiringnya waktu aku membenarnikan diri buat lebih kenal sama kamu, dan yup aku pdkt sama kamu
+            dan dimana hari kita jalan" ke jogja dan tujuan terakhir machia.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <!-- Video support: ganti src dengan file video kamu -->
+          <img src="assets/heart-collage/2.jpg" alt="Pertama Kali Bertemu" loading="lazy" />
+          <div class="timeline-date">Saat Itu</div>
+          <h3>Saat Jatuh Cinta</h3>
+          <p> Setelah aku mengenal kamu, banyak hal baru yang aku pelajari dari diri kamu. Dan selama sama kamu, nggak
+            pernah sedikit pun terlintas di hati aku rasa menyesal. Justru aku sangat bersyukur karena dipertemukan
+            dengan kamu, cintaku. Aku sayang banget sama kamu, sesayang itu. Semua yang aku lakuin ke kamu selalu datang
+            dari hati aku yang tulus cin</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <img src="assets/heart-collage/11.jpg" alt="Pertama Kali Bertemu" loading="lazy" />
+          <div class="timeline-date">Kenangan</div>
+          <h3>Momen Terindah Kita</h3>
+          <p>Semua moment setiap sama kamu terasa indah sayang,mau ke pantai mau ke kopken,mau ke manapun kalau sama
+            kamu selalu indah dan hangat cin.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <img src="assets/heart-collage/19.jpg" alt="Pertama Kali Bertemu" loading="lazy" />
+          <div class="timeline-date">Selamanya</div>
+          <h3>Bersama Selamanya</h3>
+          <p>Aku tidak tahu apa yang akan terjadi besok cin, tapi aku ingin menghabiskan setiap moment apapun sama kamu
+            cin. Kamu adalah rumahku.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ====== HEART COLLAGE ====== -->
+  <section id="heart-collage">
+    <div class="section-header">
+      <span class="section-label">Bentuk Cintaku</span>
+      <h2 class="section-title">Our Love in Photos</h2>
+    </div>
+    <div class="heart-shape-container" id="heartShapeContainer"></div>
+  </section>
+
+  <!-- ====== ENDING ====== -->
+  <section id="ending">
+    <div class="shooting-stars" id="shootingStars"></div>
+    <div class="ending-content">
+      <div class="ending-icon">💝</div>
+      <h2 class="ending-title">Aku Sayang Kamu</h2>
+      <p class="ending-message">
+        Aku Sayang sama kamu.
+        Kamu adalah rumahku, duniaku, segalanya.
+        Aku selalu ada buat kamu.
+        Maafin aku sayang.
+      </p>
+      <button class="btn-love" id="btnLove" onclick="handleLoveForever()">
+        I Love You Forever ❤️
+      </button>
+    </div>
+  </section>
+
+  <!-- Audio (user should replace with their own piano music mp3) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/piano.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
